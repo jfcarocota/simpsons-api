@@ -6,7 +6,7 @@ namespace todoapi.Dependencies
 {
     public interface ICharacter
     {
-        Character GetCharacter();
+        Character GetCharacter(int id);
 
         List<Character> GetCharacterList();
         

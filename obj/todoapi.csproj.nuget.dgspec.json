@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\documentos\\apis\\TodoApi\\todoapi.csproj": {}
+    "D:\\documentos\\apis\\todoapi\\todoapi.csproj": {}
   },
   "projects": {
-    "D:\\documentos\\apis\\TodoApi\\todoapi.csproj": {
+    "D:\\documentos\\apis\\todoapi\\todoapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\documentos\\apis\\TodoApi\\todoapi.csproj",
+        "projectUniqueName": "D:\\documentos\\apis\\todoapi\\todoapi.csproj",
         "projectName": "todoapi",
-        "projectPath": "D:\\documentos\\apis\\TodoApi\\todoapi.csproj",
+        "projectPath": "D:\\documentos\\apis\\todoapi\\todoapi.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\documentos\\apis\\TodoApi\\obj\\",
+        "outputPath": "D:\\documentos\\apis\\todoapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
