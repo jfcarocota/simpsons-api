@@ -2,14 +2,14 @@ namespace todoapi.Models
 {
     public class Character
     {
-        int id;
+        long id;
         string name;
         string gender;
         int age;
         string description;
         string photo;
 
-        public Character(int id, string name, string gender, int age, string description, string photo)
+        public Character(long id, string name, string gender, int age, string description, string photo)
         {
             this.id = id;
             this.name = name;
@@ -51,7 +51,7 @@ namespace todoapi.Models
             set => photo = value;
         }
 
-        public int Id
+        public long Id
         {
             get => id;
             set => id = value;

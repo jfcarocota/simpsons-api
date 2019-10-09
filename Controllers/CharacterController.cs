@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using todoapi.Dependencies;
 using todoapi.Models;
+using System.Data.SqlClient;
 
 namespace todoapi.Controllers
 {
@@ -56,14 +57,59 @@ namespace todoapi.Controllers
         [HttpGet("{id}")]
         public Character GetCharacter(int id) 
         {
-             return listOfCharacters[id];
+            Character tbl_characters = new Character();
+            string connectionString = "data source=JESUSPC;initial catalog=db_simpsons;user id=simpsons;password=1234";
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand($"select * from vw_characters where id = {id}", conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while(reader.Read())
+            {
+                try
+                {
+                    tbl_characters = new Character{
+                        Id = reader.GetInt64(reader.GetOrdinal("id")),
+                        Name = reader.GetString(reader.GetOrdinal("name")), 
+                        Gender = reader.GetString(reader.GetOrdinal("gender")), 
+                        Age = reader.GetInt32(reader.GetOrdinal("age")), 
+                        Description = reader.GetString(reader.GetOrdinal("description")),
+                        Photo = reader.GetString(reader.GetOrdinal("photo"))         
+                    };
+                }
+                catch(System.ArgumentOutOfRangeException e)
+                {
+                    throw new System.ArgumentOutOfRangeException("index parameter is out of range.", e);
+                }
+            }
+             return tbl_characters;
 
         }
 
         [HttpGet]
         public List<Character> GetCharacterList() 
         {
-           return listOfCharacters;
+            List<Character> tbl_characters = new List<Character>();
+            string connectionString = "data source=JESUSPC;initial catalog=db_simpsons;user id=simpsons;password=1234";
+
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("select * from vw_characters", conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            while(reader.Read())
+            {
+                Character character = new Character{
+                    Id = reader.GetInt64(reader.GetOrdinal("id")),
+                    Name = reader.GetString(reader.GetOrdinal("name")), 
+                    Gender = reader.GetString(reader.GetOrdinal("gender")), 
+                    Age = reader.GetInt32(reader.GetOrdinal("age")), 
+                    Description = reader.GetString(reader.GetOrdinal("description")),
+                    Photo = reader.GetString(reader.GetOrdinal("photo"))         
+                };
+                tbl_characters.Add(character);
+            }
+            conn.Close();
+            return tbl_characters;
         }
     }
 }

@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+using todoapi.Models;
+using todoapi.Data;
 
 namespace todoapi
 {
@@ -29,6 +32,8 @@ namespace todoapi
             {  
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());  
             });
+
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

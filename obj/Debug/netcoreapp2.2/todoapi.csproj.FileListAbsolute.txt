@@ -4,7 +4,6 @@ D:\documentos\apis\todoapi\bin\Debug\netcoreapp2.2\todoapi.runtimeconfig.dev.jso
 D:\documentos\apis\todoapi\bin\Debug\netcoreapp2.2\todoapi.dll
 D:\documentos\apis\todoapi\bin\Debug\netcoreapp2.2\todoapi.pdb
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.csprojAssemblyReference.cache
-D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.csproj.CoreCompileInputs.cache
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.RazorAssemblyInfo.cache
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.RazorAssemblyInfo.cs
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.AssemblyInfoInputs.cache
@@ -12,3 +11,6 @@ D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.AssemblyInfo.cs
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.RazorTargetAssemblyInfo.cache
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.dll
 D:\documentos\apis\todoapi\obj\Debug\netcoreapp2.2\todoapi.pdb
+D:\documentos\apis\todoapi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\documentos\apis\todoapi\bin\Debug\netcoreapp2.2\appsettings.json
+D:\documentos\apis\todoapi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
